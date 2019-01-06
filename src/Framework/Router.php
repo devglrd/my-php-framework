@@ -28,7 +28,7 @@ class Router
      * @param callable $callable
      * @param string $name
      */
-    public function get(string $path, callable $callable, string $name)
+    public function get(string $path, $callable, string $name)
     {
         $this->router->addRoute(new ZendRoute($path, $callable, ["GET"], $name));
     }
