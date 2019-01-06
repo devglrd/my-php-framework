@@ -8,6 +8,7 @@
 
 namespace Framework;
 
+use App\Modules\Blog\BlogModule;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -31,7 +32,6 @@ class App
         if (array_key_exists('renderer', $dependencies)) {
             $dependencies['renderer']->addGlobal('router', $this->router);
         }
-
         foreach ($modules as $module) {
             $this->modules[] = new $module($this->router, $dependencies['renderer']);
         }

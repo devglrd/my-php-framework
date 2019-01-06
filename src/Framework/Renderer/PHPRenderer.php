@@ -6,9 +6,9 @@
  * Time: 18:18
  */
 
-namespace Framework;
+namespace Framework\Renderer;
 
-class Renderer
+class PHPRenderer implements RendererInterface
 {
 
     const DEFAULT_NAMESPACE = '__MAIN';
@@ -17,6 +17,13 @@ class Renderer
 
     private $globals = [];
 
+
+    public function __construct(?string $defaultPath = null)
+    {
+        if (!is_null($defaultPath)) {
+            $this->addPath($defaultPath);
+        }
+    }
 
     /**
      * @param string $namespace
@@ -58,7 +65,7 @@ class Renderer
      * @param mixed $value
      * @return Renderer
      */
-    public function addGlobal(string $key, $value)
+    public function addGlobal(string $key, $value) : void
     {
         $this->globals[$key] = $value;
     }

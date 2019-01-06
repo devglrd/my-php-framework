@@ -16,7 +16,8 @@
     "require": {
         "guzzlehttp/psr7": "^1.5",
         "http-interop/response-sender": "^1.0",
-        "zendframework/zend-expressive-fastroute": "1.2.0"
+        "zendframework/zend-expressive-fastroute": "1.2.0",
+        "twig/twig": "^2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",

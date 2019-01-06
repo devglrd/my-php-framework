@@ -1,25 +1,23 @@
 <?php
+
+namespace Tests\Framework\Renderer;
+
+use Framework\Renderer\PHPRenderer;
+use PHPUnit\Framework\TestCase;
+
 /**
  * Created by PhpStorm.
  * User: glrd
  * Date: 06/01/2019
- * Time: 18:18
+ * Time: 20:05
  */
-
-namespace Tests\Framework;
-
-
-use Framework\Renderer;
-use PHPUnit\Framework\TestCase;
-
-class RendererTest extends TestCase
+class PHPRendererTest extends TestCase
 {
-
     private $renderer;
 
     public function setUp()
     {
-        $this->renderer = new Renderer();
+        $this->renderer = new PHPRenderer();
         $this->renderer->addPath(__DIR__ . "/views");
     }
 
