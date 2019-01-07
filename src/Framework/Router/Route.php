@@ -6,7 +6,7 @@
  * Time: 17:11
  */
 
-namespace Framework\Router;
+namespace Glrd\Framework\Router;
 
 class Route
 {

@@ -6,12 +6,14 @@
  * Time: 17:49
  */
 
-namespace App\Modules\Blog;
+namespace Glrd\App\Modules\Blog;
 
-use App\Modules\Blog\Actions\BlogAction;
-use Framework\Module;
-use Framework\Renderer\RendererInterface;
-use Framework\Router;
+use Glrd\Framework\Module;
+use Glrd\Framework\Renderer\RendererInterface;
+use Glrd\Framework\Router;
+
+use Glrd\App\Modules\Blog\Actions\BlogAction;
+
 
 class BlogModule extends Module
 {
@@ -21,6 +23,7 @@ class BlogModule extends Module
 
     public function __construct(string $prefix, Router $router, RendererInterface $renderer)
     {
+
         $renderer->addPath('blog', __DIR__ . '/views');
         $router->get($prefix, BlogAction::class, "blog.index");
         $router->get($prefix . '/{slug:[a-z\-0-9]+}', BlogAction::class, "blog.show");

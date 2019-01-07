@@ -6,9 +6,9 @@
  * Time: 21:45
  */
 
-namespace Framework\Router;
+namespace Glrd\Framework\Router;
 
-use Framework\Router;
+use Glrd\Framework\Router;
 
 class RouterTwigExtension extends \Twig_Extension
 {

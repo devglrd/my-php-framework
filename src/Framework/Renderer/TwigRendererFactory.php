@@ -6,7 +6,7 @@
  * Time: 20:31
  */
 
-namespace Framework\Renderer;
+namespace Glrd\Framework\Renderer;
 
 use Psr\Container\ContainerInterface;
 

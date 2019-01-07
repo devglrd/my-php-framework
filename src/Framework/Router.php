@@ -6,9 +6,9 @@
  * Time: 17:10
  */
 
-namespace Framework;
+namespace Glrd\Framework;
 
-use Framework\Router\Route;
+use Glrd\Framework\Router\Route;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\Expressive\Router\Route as ZendRoute;
@@ -40,14 +40,10 @@ class Router
     public function match(ServerRequestInterface $request): ?Route
     {
         $result = $this->router->match($request);
-        if ($result->isSuccess()) {
-            return new Route($result->getMatchedRouteName(), $result->getMatchedMiddleware(), $result->getMatchedParams());
-        } else {
-            return null;
-        }
+        return $result->isSuccess() ? new Route($result->getMatchedRouteName(), $result->getMatchedMiddleware(), $result->getMatchedParams()) : null;
     }
 
-    public function generateUri(string $name, array $params) : ?string
+    public function generateUri(string $name, array $params): ?string
     {
         return $this->router->generateUri($name, $params);
     }

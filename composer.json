@@ -8,8 +8,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Framework\\" : "src/Framework",
-            "App\\" : "src/Modules",
+            "Glrd\\Framework\\" : "src/Framework",
+            "Glrd\\App\\" : "src/Modules",
             "Tests\\" : "tests"
         }
     },

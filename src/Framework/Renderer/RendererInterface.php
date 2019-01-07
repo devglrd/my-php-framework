@@ -6,7 +6,7 @@
  * Time: 18:18
  */
 
-namespace Framework\Renderer;
+namespace Glrd\Framework\Renderer;
 
 interface RendererInterface
 {

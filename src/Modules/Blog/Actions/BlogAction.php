@@ -6,9 +6,9 @@
  * Time: 21:31
  */
 
-namespace App\Modules\Blog\Actions;
+namespace Glrd\App\Modules\Blog\Actions;
 
-use Framework\Renderer\RendererInterface;
+use Glrd\Framework\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class BlogAction

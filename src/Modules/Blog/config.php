@@ -6,12 +6,12 @@
  * Time: 21:03
  */
 
-use App\Modules\Blog\BlogModule;
 
 return [
     'blog.prefix' => '/blog',
     'twig.extensions' => \DI\add([
-        DI\get(\App\Modules\Blog\DemoExtension::class)
+        DI\get(\Glrd\App\Modules\DemoExtension::class)
     ]),
-    BlogModule::class => DI\autowire()->constructorParameter('prefix', \DI\get("blog.prefix"))
+    Glrd\App\Modules\Blog\BlogModule::class => DI\autowire()->constructorParameter('prefix', \DI\get("blog.prefix")),
+
 ];

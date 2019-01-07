@@ -6,7 +6,7 @@
  * Time: 22:01
  */
 
-namespace App\Modules\Blog;
+namespace Glrd\App\Modules;
 
 class DemoExtension extends \Twig_Extension
 {

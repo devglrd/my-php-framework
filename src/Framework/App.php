@@ -6,9 +6,8 @@
  * Time: 14:50
  */
 
-namespace Framework;
+namespace Glrd\Framework;
 
-use App\Modules\Blog\BlogModule;
 use GuzzleHttp\Psr7\Response;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -21,6 +20,7 @@ class App
 
 
     private $router;
+
     private $container;
 
     /**
@@ -75,5 +75,13 @@ class App
         } else {
             throw new \Exception("The response is not a string or an instance of responseInterface");
         }
+    }
+
+    /**
+     * @return ContainerInterface
+     */
+    public function getContainer(): ContainerInterface
+    {
+        return $this->container;
     }
 }

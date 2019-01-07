@@ -6,7 +6,7 @@
  * Time: 20:01
  */
 
-namespace Framework\Renderer;
+namespace Glrd\Framework\Renderer;
 
 class TwigRenderer implements RendererInterface
 {
