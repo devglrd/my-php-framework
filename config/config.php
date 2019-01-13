@@ -12,7 +12,7 @@ use Glrd\Framework\Router;
 return [
     'views.path' => dirname(__DIR__) . "/views",
     'twig.extensions' => [
-        DI\get(\Framework\Router\RouterTwigExtension::class)
+        DI\get(Glrd\Framework\Router\RouterTwigExtension::class)
     ],
     RendererInterface::class => DI\factory(\Glrd\Framework\Renderer\TwigRendererFactory::class),
     Router::class => function () {

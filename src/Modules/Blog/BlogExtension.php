@@ -6,9 +6,9 @@
  * Time: 22:01
  */
 
-namespace Glrd\App\Modules;
+namespace Glrd\App\Modules\Blog;
 
-class DemoExtension extends \Twig_Extension
+class BlogExtension extends \Twig_Extension
 {
     public function getFunctions()
     {

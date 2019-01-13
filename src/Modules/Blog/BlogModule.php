@@ -8,16 +8,19 @@
 
 namespace Glrd\App\Modules\Blog;
 
-use Glrd\Framework\Module;
+use Glrd\App\Modules\Module;
 use Glrd\Framework\Renderer\RendererInterface;
 use Glrd\Framework\Router;
 
 use Glrd\App\Modules\Blog\Actions\BlogAction;
 
-
 class BlogModule extends Module
 {
     const DEFINITIONS = __DIR__ . '/config.php';
+
+    const MIGRATIONS = __DIR__ . "/db/migrations";
+
+    const SEEDS = __DIR__ . "/db/seeds";
 
     private $renderer;
 

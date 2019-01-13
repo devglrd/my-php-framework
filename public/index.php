@@ -19,9 +19,6 @@ $builder->addDefinitions(dirname(__DIR__) . "/config/config.php");
 
 
 foreach ($modules as $module) {
-    var_dump($module);
-    var_dump(class_exists($module)); //Why class not exists ?
-    die();
     if ($module::DEFINITIONS) {
         $builder->addDefinitions($module::DEFINITIONS);
     }

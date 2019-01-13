@@ -2,7 +2,7 @@
 
 namespace Tests\Framework\Renderer;
 
-use Framework\Renderer\PHPRenderer;
+use Glrd\Framework\Renderer\PHPRenderer;
 use PHPUnit\Framework\TestCase;
 
 /**

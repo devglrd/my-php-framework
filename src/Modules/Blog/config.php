@@ -7,11 +7,13 @@
  */
 
 
+use Glrd\App\Modules\Blog\BlogModule;
+
 return [
     'blog.prefix' => '/blog',
     'twig.extensions' => \DI\add([
-        DI\get(\Glrd\App\Modules\DemoExtension::class)
+        DI\get(\Glrd\App\Modules\Blog\BlogExtension::class)
     ]),
-    Glrd\App\Modules\Blog\BlogModule::class => DI\autowire()->constructorParameter('prefix', \DI\get("blog.prefix")),
+    BlogModule::class => DI\autowire()->constructorParameter('prefix', \DI\get("blog.prefix")),
 
 ];

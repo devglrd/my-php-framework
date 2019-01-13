@@ -9,7 +9,7 @@
 namespace Tests\Framework;
 
 
-use Framework\Router;
+use Glrd\Framework\Router;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\ServerRequest;
 use PHPUnit\Framework\TestCase;
